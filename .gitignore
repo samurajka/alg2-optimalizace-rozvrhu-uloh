@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/alg2-optimalizace-rozvrhu-uloh/latex
+/alg2-optimalizace-rozvrhu-uloh/html
