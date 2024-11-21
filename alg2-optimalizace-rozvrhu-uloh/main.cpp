@@ -27,19 +27,29 @@ std::vector<int> readIntegersFromFile(const std::string& filename) {
 	return numbersVec;
 }
 
-
+//! \class Task
+/*!
+* A Task contains information about the start time, end time and value of the Task \n
+* 
+*/
 class Task {
 public:
+	//! Time when the task starts
 	int start;
+	//! Time when the task ends
 	int end;
+	//! The value we get when doing the task
 	int value;
 
+	//! Task constructor, all parameters are required
 	Task(int s, int e, int v) {
 		start = s;
 		end = e;
 		value = v;
 	}
 
+	//! Comparison operators compare the end times of two Tasks \n
+	//! The algorithm needs to sort the Tasks to work properly 
 	bool operator >(Task other) {
 		return end > other.end;
 	}
@@ -49,6 +59,11 @@ public:
 };
 
 
+//! \class TaskSolver
+/*!
+* The TaskSolver class includes a method for solving the problem
+*
+*/
 class TaskSolver {
 private:
 	int recursionSolve(vector<Task> input, int i) {
@@ -81,6 +96,13 @@ private:
 
 public:
 
+	//! \fn Solve
+	/*!
+	* The method solves the problem using recursion
+	* 
+	* \param input is a vector of Tasks. Input doesnt have to be ordered, the method orders it
+	* \return integer with the maximum posible value we can get from the tasks
+	*/
 	int Solve(vector<Task> input) {
 		int len = input.size();
 		sort(input.begin(), input.end());
