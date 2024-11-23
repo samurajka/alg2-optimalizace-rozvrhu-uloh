@@ -48,5 +48,11 @@ int main(int argc, char* argv[]) {
 
 	cout << result << endl;
 
+	cout << endl;
+
+	result = ts.DynamicSolve(tasks);
+
+	cout << result << endl;
+
 	return 0;
 }

@@ -15,6 +15,10 @@ private:
 
 	int recSolveTaskIncluded(vector<Task> input, int i);
 
+	int findIndexWhenIncluded(vector<Task> input, int i);
+
+	void findSubResults(vector<int>& subResults, const vector<Task>& input, int len);
+
 public:
 
 	//! \fn Solve
@@ -25,4 +29,6 @@ public:
 	* \return integer with the maximum posible value we can get from the tasks
 	*/
 	int Solve(vector<Task> input);
+
+	int DynamicSolve(vector<Task> input);
 };
