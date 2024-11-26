@@ -46,12 +46,14 @@ int main(int argc, char* argv[]) {
 
 	int result = ts.Solve(tasks);
 
+	cout << "Brute Force: ";
 	cout << result << endl;
 
 	cout << endl;
 
 	result = ts.DynamicSolve(tasks);
 
+	cout << "Dynamicky: ";
 	cout << result << endl;
 
 	return 0;
