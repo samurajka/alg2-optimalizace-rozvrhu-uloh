@@ -13,7 +13,7 @@ class TaskSolver {
 private:
 	//! \fn recursionSolve
 	/*!
-	* The method is called recursively until i == 1
+	* The method is called recursively until i == 1 \n
 	* calls itself with i-1 and recSolveTaskIncluded then returns the maximum of the two
 	* 
 	* \param input is a vector of Tasks.
