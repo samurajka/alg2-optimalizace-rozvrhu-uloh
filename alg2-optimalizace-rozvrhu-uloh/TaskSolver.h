@@ -6,13 +6,30 @@ using namespace std;
 
 //! \class TaskSolver
 /*!
-* The TaskSolver class includes a method for solving the problem
+* The TaskSolver class includes a methods for solving the problem
 *
 */
 class TaskSolver {
 private:
+	//! \fn recursionSolve
+	/*!
+	* The method is called recursively until i == 1
+	* calls itself with i-1 and recSolveTaskIncluded then returns the maximum of the two
+	* 
+	* \param input is a vector of Tasks.
+	* \param i is the index for which we want to calculate the maximum value
+	* \return integer with the maximum posible value we can get from the tasks so far
+	*/
 	int recursionSolve(vector<Task> input, int i);
 
+	//! \fn recSolveTaskIncluded
+	/*!
+	*  Similar to recursionSolve but it has to find the next task that doesnt conflict with input[i]
+	* 
+	* \param input is a vector of Tasks.
+	* \param i is the index for which we want to calculate the maximum value
+	* \return integer with the maximum posible value we can get from the tasks so far
+	*/ 
 	int recSolveTaskIncluded(vector<Task> input, int i);
 
 	int findIndexWhenIncluded(vector<Task> input, int i);
@@ -23,12 +40,21 @@ public:
 
 	//! \fn Solve
 	/*!
-	* The method solves the problem using recursion
+	* The method solves the problem using a brute force recursive approach \n
+	* It starts by sorting the array and then calls the recursionSolve private method
 	*
 	* \param input is a vector of Tasks. Input doesnt have to be ordered, the method orders it
 	* \return integer with the maximum posible value we can get from the tasks
 	*/
 	int Solve(vector<Task> input);
 
+
+	//! \fn DynamicSolve
+	/*!
+	* The method solves the problem using a dynamic programing approach
+	*
+	* \param input is a vector of Tasks. Input doesnt have to be ordered, the method orders it
+	* \return integer with the maximum posible value we can get from the tasks
+	*/
 	int DynamicSolve(vector<Task> input);
 };

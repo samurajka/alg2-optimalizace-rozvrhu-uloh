@@ -44,7 +44,6 @@ int TaskSolver::Solve(vector<Task> input) {
 //////////////////////////////////////////////////
 // Dynamicke programovani
 int TaskSolver::findIndexWhenIncluded(vector<Task> input, int i) {
-
 	int j = i;//
 	while (j >= 0) {
 		if (input[j].end <= input[i].start) {
@@ -59,9 +58,9 @@ int TaskSolver::findIndexWhenIncluded(vector<Task> input, int i) {
 void TaskSolver::findSubResults(vector<int> &subResults, const vector<Task> &input, int len) {
 	for (int i = 1; i < len;i++) {
 		int taskIncluded = input[i].value;
-		int nextIndex = findIndexWhenIncluded(input, i);
+		int prevIndex = findIndexWhenIncluded(input, i);
 
-		if (nextIndex != -1) { taskIncluded += subResults[nextIndex]; }
+		if (prevIndex != -1) { taskIncluded += subResults[prevIndex]; }
 
 		subResults[i] = max(taskIncluded, subResults[i - 1]);
 	}
