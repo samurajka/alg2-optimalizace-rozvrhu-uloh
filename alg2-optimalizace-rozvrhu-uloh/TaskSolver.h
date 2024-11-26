@@ -32,8 +32,25 @@ private:
 	*/ 
 	int recSolveTaskIncluded(vector<Task> input, int i);
 
+
+
+	//! \fn findIndexWhenIncluded
+	/*!
+	* finds index of next task that doesnt overlap with input[i]
+	*
+	* \param input is a vector of Tasks
+	* \param i is the index of the Task we dont want to overlap
+	*/
 	int findIndexWhenIncluded(vector<Task> input, int i);
 
+	//! \fn findSubResults
+	/*!
+	* recursively solves subproblems and stores the values in subResults
+	* 
+	* \param subResults vector where the subResults will be stored
+	* \param input vector of tasks
+	* \param len lenght of the vectors
+	*/
 	void findSubResults(vector<int>& subResults, const vector<Task>& input, int len);
 
 public:
