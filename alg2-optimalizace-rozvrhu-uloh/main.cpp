@@ -58,3 +58,22 @@ int main(int argc, char* argv[]) {
 
 	return 0;
 }
+
+
+/*! \mainpage Optimalizace rozvrhu uloh mainpage
+ *
+ * \section intro_sec Introduction
+ *
+ * The algorithm determines the maximum value that can be obtained by selecting non-overlapping tasks from a given vector. \n\n
+ * 
+ * A naive solution of the problem would be to calculate all the valid task combinations and pick the best. This would take too long and instead we can use a dynamic programing approach. \n\n
+ * 
+ * We set the the first result to be equal to the first task. 
+ * For each following task we calculate the value we get by including it.
+ * This is done by adding the task value and the value of the last valid subresult (if such subresult exists).
+ * Then we compare the value we get by including the task with the value of the previous subresult. 
+ * We store the maximum into the subresults.
+ * When the algorithm finishes we just need to return the last value in subresults.
+ *
+ * 
+ */

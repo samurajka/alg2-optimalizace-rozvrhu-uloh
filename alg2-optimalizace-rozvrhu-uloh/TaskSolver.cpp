@@ -2,7 +2,7 @@
 #include <algorithm>
 
 ////////////////////////////////////////////
-// Brute Force øešení
+// Brute Force Å™eÅ¡enÃ­
 int TaskSolver::recursionSolve(vector<Task> input, int i) {
 	if (i == 1) return input[i - 1].value;
 
@@ -37,7 +37,7 @@ int TaskSolver::Solve(vector<Task> input) {
 		sort(input.begin(), input.end());
 		return recursionSolve(input, len);
 }
-// Brute Force øešení
+// Brute Force Å™eÅ¡enÃ­
 ///////////////////////////////////////////////////
 
 
