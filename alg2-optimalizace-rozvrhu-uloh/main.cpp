@@ -68,12 +68,12 @@ int main(int argc, char* argv[]) {
  * 
  * A naive solution of the problem would be to calculate all the valid task combinations and pick the best. This would take too long and instead we can use a dynamic programing approach. \n\n
  * 
- * We set the the first result to be equal to the first task. 
- * For each following task we calculate the value we get by including it.
- * This is done by adding the task value and the value of the last valid subresult (if such subresult exists).
- * Then we compare the value we get by including the task with the value of the previous subresult. 
- * We store the maximum into the subresults.
- * When the algorithm finishes we just need to return the last value in subresults.
+ * We set the the first result to be equal to the first task. \n
+ * For each following task we calculate the value we get by including it. \n
+ * This is done by adding the task value and the value of the last valid subresult (if such subresult exists). \n
+ * Then we compare the value we get by including the task with the value of the previous subresult. \n
+ * We store the maximum into the subresults. \n
+ * When the algorithm finishes we just need to return the last value in subresults. \n
  *
  * 
  */
